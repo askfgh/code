@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网易的新闻列表</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body{
+            /* background-color: #bfa; */
+        }
+        /* 设置容器的样式 */
+        .news-wrapper{
+            width: 300px;
+            height: 357px;
+            /* 设置背景颜色 */
+            background-color: #fff;
+            /* 设置居中 */
+            margin: 50px auto;
+
+            /* 设置上边框 */
+            border-top: 1px solid #ddd;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .news-title{
+            /* 为了使边框和文字宽度一致，需要将h2设置为行内块元素 */
+            display: inline-block;
+            height: 40px;
+            /* 文字上下居中 */
+            line-height: 40px;
+            border-top: 1px solid red;
+            /* 通过margin-top将h2网上易，盖住上边框 */
+            margin-top: -1px;
+        }
+
+        /* 设置title中超链接的样式 */
+        .news-title a{
+            /* 去除下划线 */
+            text-decoration: none;
+            /* 设置颜色 */
+            color:#404068 ;
+            /* 设置文字的加粗效果 */
+            font-weight: bold;
+        }
+        /* 设置图片容器的高度 */
+        .news-img{
+            height: 150px;
+        }
+
+        /* 设置图片的文字效果 */
+        .news-img .img-title{
+            /* 向上移动文字 */
+            margin-top: -30px;
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 字体加粗 */
+            font-weight: bold;
+            /* 设置padding */
+            padding-left: 20px;
+
+        }
+        /* 通过before伪元素，来为每一个li添加项目符号 */
+        .news-list li::before{
+            content:'■';
+            color: rgb(218, 218, 218);
+            font-size: 10px;
+            margin-left: -20px;
+        }
+
+        /* 设置新闻列表 */
+        .news-list
+        {
+            margin: 20px;
+            padding-left: -6px;
+
+            /* 设置项目符号 */
+            /* list-style: square; */
+        }
+        /* 设置li */
+        .news-list li{
+            margin-bottom: 17px;
+        }
+
+        /* 设置li中的文字 */
+        .news-list li a{
+            font-size: 14px;
+
+            color: #666;
+        }
+
+        /* 设置超链接鼠标移入的样式 */
+        .news-list li a:hover{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 创建一个新闻列表的容器 -->
+    <div class="news-wrapper">
+        <!-- 创建一个标题标签 -->
+        <h2 class="news-title">
+            <a href="#">体育</a>
+        </h2>
+        <!-- 创建一个图片的容器 -->
+        <div class="news-img">
+            <a href="#">
+            <img src="./img/03/01.webp" alt="图片">
+            <!-- 创建图片标题 -->
+            <h3 class="img-title">
+                这就是图片的标题
+            </h3>
+            </a>
+        </div>
+
+        <!-- 新闻列表 -->
+        <ul class="news-list">
+            <li>
+                <a href="#">这是图片下面的1号小标题</a>
+            </li>
+
+            <li>
+                <a href="#">这是图片下面的2号小标题</a>
+            </li>
+
+            <li>
+                <a href="#">这是图片下面的3号小标题</a>
+            </li>
+
+            <li>
+                <a href="#">这是图片下面的4号小标题</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

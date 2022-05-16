@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图片列表</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <style>
+        .main{
+            width: 200px;
+            height: 480px;
+            overflow: hidden;
+            background-color: antiquewhite;
+            margin: 50px auto;
+        }
+
+        .main img{
+            /* 这里要改成父元素 子元素 或者使直接子元素。不能使用子元素的类加上100% */
+            width: 100%;
+        }
+
+        .img{
+            margin-bottom: 8px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <ul class="main">
+        <li class="img">
+            <a href="#">
+                <img src="../img/01/1.webp" alt="">
+            </a>
+        </li>
+        
+        <li class="img">
+            <a href="#">
+                <img src="../img/01/2.webp" alt="">
+            </a>
+        </li>
+
+        <li class="img">
+            <a href="#">
+                <img src="../img/01/3.webp" alt="">
+            </a>
+        </li>
+    </ul>
+</body>
+</html>
