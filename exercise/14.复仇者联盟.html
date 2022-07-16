@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .cube{
+            perspective: 700px;
+        }
+        .cube{
+            width: 200px;
+            height: 200px;
+            /* background-color: #bfa; */
+            margin: 100px auto;
+            /* 设置3d变形效果 */
+            transform-style: preserve-3d;
+            /* transform: rotateX(45deg) rotateZ(45deg); */
+            animation: rotate 20s infinite linear;
+
+        }
+        .cube > div{
+            height: 200px;
+            width: 200px;
+            /* 为元素设置透明效果 */
+            /* opacity: 0.8; */
+            position: absolute;
+        }
+
+        img{
+            width: 200px;
+            height: 200px;
+            vertical-align: top;
+        }
+
+        .box1{
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        .box2{
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        .box3{
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .box4{
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .box6{
+            transform:translateZ(100px);
+        }
+
+        .box5{
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        @keyframes rotate{
+            from{
+                transform: rotateX(0) rotateZ(0);
+            }
+
+            to{
+                transform: rotateX(360deg) rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cube">
+        <div class="box1">
+            <img src="./img/14/1.webp">
+        </div>
+
+        <div class="box2">
+            <img src="./img/14/2.webp">
+        </div>
+
+        <div class="box3">
+            <img src="./img/14/3.webp">
+        </div>
+
+        <div class="box4">
+            <img src="./img/14/4.webp">
+        </div>
+
+        <div class="box5">
+            <img src="./img/14/5.webp">
+        </div>
+
+        <div class="box6">
+            <img src="./img/14/6.webp">
+        </div>
+    </div>
+</body>
+</html>
